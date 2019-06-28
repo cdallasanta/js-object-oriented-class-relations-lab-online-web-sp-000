@@ -56,7 +56,7 @@ class Passenger {
     return this.trips().reduce(function(arr, trip){
       arr.push(trip.driver());
       return arr;
-    });
+    }, []);
   };
 };
 
