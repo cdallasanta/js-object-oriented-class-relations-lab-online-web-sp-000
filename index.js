@@ -48,11 +48,15 @@ class Passenger {
   };
 
   drivers() {
-    let drivers = [];
-    this.trips().forEach(function(trip){
-      drivers.push(trip.driver());
+    // let drivers = [];
+    // this.trips().forEach(function(trip){
+    //   drivers.push(trip.driver());
+    // });
+    // return drivers;
+    return this.trips().reduce(function(arr, trip){
+      arr.push(trip.driver());
+      return arr;
     });
-    return drivers;
   };
 };
 
